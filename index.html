@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Pawel App</title>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<style type="text/css">
-	body{
-		margin:0px;
-		padding: 0px;
-		overflow: hidden;
-	}
+  <head>
+    <title>InAppBrowser.addEventListener Example</title>
 
-	iframe{
-		width: 100%;
-		height:600px;
-		border: none;
-	}
-</style>
-<script type="text/javascript">
-	var frameH = $('#frame').height();
-	$('#frame').css('height',frameH );
-</script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
-</head>
-<body>
-<iframe id="frame" src="http://www.pawelj.cal.pl"></iframe> 
-</body>
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+         var ref = window.open('http://www.pawelj.cal.pl', '_blank', 'location=yes');
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+         ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+         ref.addEventListener('exit', function(event) { alert(event.type); });
+    }
+
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
+
