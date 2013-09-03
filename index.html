@@ -38,8 +38,9 @@
             if(states[networkState]== 'No network connection'){
             	//jesli nie ma polaczenia
             	alert(states[networkState]);
-               var url = "no_conection.html";    
-              $(location).attr('href',url);            	
+             //  var url = "no_conection.html";    
+             // $(location).attr('href',url);  
+             window.location="no_conection.html";
             }else{
             	alert(states[networkState]);
             	//jesli jest polaczenie
