@@ -45,8 +45,8 @@
            $(location).attr('href',url);            	
             }else{
             	//jesli jest polaczenie
-            var url = "http://www.pawelj.cal.pl";    
-           $(location).attr('href',url);          	
+         var ref = window.location.href = 'http://www.pawelj.cal.pl';
+         ref.addEventListener('loadstart', function(event) { });          	
             }
             
 
