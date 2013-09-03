@@ -3,6 +3,24 @@
 <head>
 	<title>Pawel App</title>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+
+   <script type="text/javascript" charset="utf-8">  
+    function onLoad()
+    {
+      console.log("device reday !!!!")
+      document.addEventListener("deviceready", onDeviceReady, true);
+    }
+    function exitFromApp()
+    {
+     console.log("in button");
+     navigator.app.exitApp();
+    }
+   </script>
+
+	
+	
+	
 	<style type="text/css">
 	body{
 		margin:0px;
@@ -17,8 +35,12 @@
 
 
 </head>
-<body>
-<div id="box"><h2>You need internet access to use this app</h2></div>
-<FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+
+
+<body onload="onLoad();">
+<h4><center>You need internet access to use this app</center></h4>
+
+<input type="submit" onclick="exitFromApp()" value="exit"/>
+
 </body>
 </html>
