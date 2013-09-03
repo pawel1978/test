@@ -28,7 +28,7 @@
             states[Connection.CELL]     = 'Cell generic connection';
             states[Connection.NONE]     = 'No network connection';
           
-           alert('Connection type: ' + states[networkState]);
+         //  alert('Connection type: ' + states[networkState]);
           
 
         
@@ -38,8 +38,8 @@
             if(states[networkState]== 'No network connection'){
             	//jesli nie ma polaczenia
             	alert(states[networkState]);
-          //  var url = "no_connection.html";    
-          // $(location).attr('href',url);            	
+               var url = "no_connection.html";    
+              $(location).attr('href',url);            	
             }else{
             	alert(states[networkState]);
             	//jesli jest polaczenie
