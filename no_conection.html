@@ -2,21 +2,19 @@
 <html>
 <head>
 	<title>Pawel App</title>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+       <script type="text/javascript" charset="utf-8">
 
-   <script type="text/javascript" charset="utf-8">  
-    function onLoad()
-    {
-      console.log("device reday !!!!")
-      document.addEventListener("deviceready", onDeviceReady, true);
-    }
-    function exitFromApp()
-    {
-     console.log("in button");
-     navigator.app.exitApp();
-    }
-   </script>
+            function onLoad()
+            {
+                  document.addEventListener("deviceready", onDeviceReady, true);
+            }
+
+            function exitFromApp()
+             {
+                navigator.app.exitApp();
+             }
+
+        </script>
 
 	
 	
@@ -34,13 +32,13 @@
 </style>
 
 
-</head>
 
 
-<body onload="onLoad();">
-<h4><center>You need internet access to use this app</center></h4>
 
-<input type="submit" onclick="exitFromApp()" value="exit"/>
+    </head>
 
-</body>
+    <body onload="onLoad();">
+    <h4><center>You need internet access to use this app</center></h4>
+       <button name="buttonClick" onclick="exitFromApp()">Click Me!</button>
+    </body>
 </html>
