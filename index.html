@@ -16,6 +16,10 @@
     //
     function onDeviceReady() {
         checkConnection();
+    // przekierowuje 
+         var ref = window.location.href = 'http://www.pawelj.cal.pl';
+         ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); }); 
+        
     }
 
         function checkConnection() {
