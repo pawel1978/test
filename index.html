@@ -35,16 +35,22 @@
    
          
             
-            if(states[networkState]== 'No network connection'){
+            if(states[networkState]== 'No network connection' || states[networkState]== 'WiFi connection'){
             	//jesli nie ma polaczenia
             	alert(states[networkState]);
              //  var url = "no_conection.html";    
              // $(location).attr('href',url);  
              window.location="no_conection.html";
             }else{
-            	alert(states[networkState]);
+            	if(pP){
+            	//	
+            	}else{
+            	alert(states[networkState]);	
+            	}
+            	
             	//jesli jest polaczenie
             	window.location.href = 'http://www.pawelj.cal.pl';
+            	var pP = true;
        //  var ref = window.location.href = 'http://www.pawelj.cal.pl';
        //  ref.addEventListener('loadstart', function(event) { });          	
             }
