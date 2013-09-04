@@ -1,0 +1,83 @@
+
+body{
+	background-color: #F4959A;
+	font-family: "Times New Roman", Times, serif;
+	color: #F4959A;
+	color: #Fff;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(images/loader.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 400px;
+}
+
+#wraper{
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	background-image: url(../images/fill6.png);
+	background-repeat: repeat;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding-top: 20px;
+}
+
+#logo  {
+	height: auto;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#logo img {
+	height: auto;
+	width: 90%;
+}
+
+
+#menu{
+	height: auto;
+	width: 80%;
+	margin-top: 20px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#menu ul {
+	list-style-type: none;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu ul li{
+	background-color: #F4959A;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#menu ul li a{
+	font-family: "Times New Roman", Times, serif;
+	color: #3c0c00;
+	font-size: 18px;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: 800;
+	text-transform: capitalize;
+	}
+
+#menu ul li:hover{
+	background-color: #3c0c00;
+}
+
+#menu ul li:hover a{
+	color: #fff;
+}
+
