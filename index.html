@@ -2,7 +2,7 @@
 <html>
   <head>
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <title>InAppBrowser.addEventListener Example</title>
+    <title>Pawel App</title>
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
@@ -28,32 +28,20 @@
             states[Connection.CELL]     = 'Cell generic connection';
             states[Connection.NONE]     = 'No network connection';
           
-         //  alert('Connection type: ' + states[networkState]);
-          
-
-        
-   
          
-            
-           // if(states[networkState]== 'No network connection' || states[networkState] != 'WiFi connection' ){
            if(states[networkState]== 'No network connection' || states[networkState] == 'Cell generic connection'
            || states[networkState] == 'Unknown connection' ){
             	//jesli nie ma polaczenia
-            	alert(states[networkState]);
-             //  var url = "no_conection.html";    
-             // $(location).attr('href',url);  
+            	alert(states[networkState]); 
              window.location="no_conection.html";
             }else{
             	
             	alert(states[networkState]);	
             	
             	//jesli jest polaczenie
-            	window.location.href = 'http://www.pawelj.cal.pl';
-            
-       //  var ref = window.location.href = 'http://www.pawelj.cal.pl';
-       //  ref.addEventListener('loadstart', function(event) { });          	
-            }
-            
+            	//window.location.href = 'http://www.pawelj.cal.pl';
+                    	
+            }            
          ///////////////////////////////////  
         }
         
@@ -61,9 +49,7 @@
         
      function onDeviceReady() {
         checkConnection();
-    // przekierowuje 
-      //   var ref = window.location.href = 'http://www.pawelj.cal.pl';
-      //   ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); }); 
+  ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); }); 
         
     }       
 
@@ -71,39 +57,39 @@
     ///////////////////////////////////////
     
     
-        // device APIs are available
-    // przekierowuje tymczasowo wylaczone
-   // function onDeviceReady() {
-     //    var ref = window.location.href = 'http://www.pawelj.cal.pl';
-     //    ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
-  //  }
 
     </script>
 
-	
-
-	
-	<style type="text/css">
-	body{
-		margin:0px;
-		padding: 0px;
-		overflow: hidden;
-	}
-
-	iframe{
-		width: 100%;
-		height:600px;
-		border: none;
-	}
+  <script src="jquery.xdomainajax.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $("#page1").click(function(){
+            $('#result').load('page1.html');
+             //alert("Thanks for visiting!");
+           }); 
+         });
+     </script>
+<style type="text/css">
+#result img{
+width:200px;
+height:auto;
+}
 </style>
-<script type="text/javascript">
-//	var frameH = $('#frame').height();
-//	$('#frame').css('height',frameH );
-</script>
 
-</head>
-<body>
-strona startowa
-<!--<iframe id="frame" src="http://www.pawelj.cal.pl"></iframe> -->
-</body>
+
+  </head>
+  <body>
+
+     
+<a href="http://design78.net" class="ajaxtrigger">zaladuj design 78</a>
+<div id="target"></div>
+
+
+    <ul>
+    <li><a id="page1" href="#">About</a></li>
+</ul>
+tu bedzie page1.html albo design78.net
+<hr />
+<div id="result" style="clear:both;"></div>
+  </body>
 </html>
