@@ -33,56 +33,50 @@
          
            if(states[networkState]== 'No network connection' || states[networkState] == 'Cell generic connection'
            || states[networkState] == 'Unknown connection' ){
-            	//jesli nie ma polaczenia
-            	alert(states[networkState]); 
+             //jesli nie ma polaczenia
+             alert(states[networkState]);
+             // var url = "no_conection.html";
+             // $(location).attr('href',url);
              window.location="no_conection.html";
             }else{
-            	
-            	alert(states[networkState]);	
-            	
-            	//jesli jest polaczenie
-            	//window.location.href = 'http://www.pawelj.cal.pl';
-                    	
-            }            
-         ///////////////////////////////////  
+            
+             alert(states[networkState]); 
+            
+             //jesli jest polaczenie
+             window.location.href = 'http://www.pawelj.cal.pl';
+            
+       // var ref = window.location.href = 'http://www.pawelj.cal.pl';
+       // ref.addEventListener('loadstart', function(event) { });
+            }
+            
+         ///////////////////////////////////
         }
         
 
         
      function onDeviceReady() {
         checkConnection();
-  ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); }); 
-
-             //laduje page 1
-             $("#page1").click(function(){
-            $('#result').load('page1.html');
-          }
+    // przekierowuje
+      // var ref = window.location.href = 'http://www.pawelj.cal.pl';
+      // ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
         
-    }       
+    }     
+
+
+                function exitFromApp()
+             {
+                navigator.app.exitApp();
+             } 
 
     
     ///////////////////////////////////////
     
-    
-
-    </script>
+ </script>
 
   <script src="jquery.xdomainajax.js"></script>
 
 
-       <script type="text/javascript" charset="utf-8">
-
-            function onLoad()
-            {
-                  document.addEventListener("deviceready", onDeviceReady, true);
-            }
-
-            function exitFromApp()
-             {
-                navigator.app.exitApp();
-             }
-
-        </script>
+   
 
 
 
