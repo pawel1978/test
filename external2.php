@@ -16,29 +16,20 @@
 #button1{
 	background-color: #444444;
 	color: #fff;
+	padding: 10px;
 	float: left;
 	margin: 5px;
 }
 
 #button1 a{
-	width:120px;
-	height:60px;
 	color: #fff;
-	padding-top:40px;
 	text-decoration: none;
-	float: left;
 }
 #button{
 	position: absolute;
 	left: 20px;
 	bottom:10px;
 	z-index: 999;
-	width:120px;
-	color: #fff;
-	padding:20px;
-	text-decoration: none;
-	background-color: #444444;
-	border:none;
 }
 
 #clear{
@@ -75,8 +66,9 @@
 
 
 <div id="external">
-<h1>External Page 1</h1>
-<div id="button1"><a href="external2.php">external page</a></div>
+	<h1>External Page 2</h1>
+
+<div id="button1"><a href="#">test 1</a></div>
 <div id="button1"><a href="#">test 2</a></div>
 <div id="button1"><a id="page1" href="#" >Back</a></div>
 <div id="clear"></div>
