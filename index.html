@@ -50,6 +50,10 @@
      function onDeviceReady() {
         checkConnection();
   ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); }); 
+
+             //laduje page 1
+             $("#page1").click(function(){
+            $('#result').load('page1.html');
         
     }       
 
@@ -81,13 +85,13 @@ height:auto;
   <body>
 
      
-<a href="http://design78.net" class="ajaxtrigger">zaladuj design 78</a>
+<h2><a href="http://design78.net" class="ajaxtrigger">zaladuj design 78</a><h2>
 <div id="target"></div>
 
 
-    <ul>
-    <li><a id="page1" href="#">About</a></li>
-</ul>
+  
+    <h2><a id="page1" href="#">About</a></h2>
+
 tu bedzie page1.html albo design78.net
 <hr />
 <div id="result" style="clear:both;"></div>
